@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	img.width = 200;
 	img.height = 200;
 	
-	img.src = "Koala.jpeg";
+	img.src = "Koala.jpg";
 	document.body.appendChild(img);
 	
 });
