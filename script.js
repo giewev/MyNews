@@ -6,13 +6,19 @@ function handleRequest(
 	sender, sendResponse
 	) {
 	if (request.callFunction == "toggleSidebar")
-		toggleSidebar();
+		toggleSbWrap();
 }
 chrome.extension.onRequest.addListener(handleRequest);
 
 /*Small function wich create a sidebar(just to illustrate my point)*/
 var sidebarOpen = false;
-function toggleSidebar() {
+
+//here
+function toggleSbWrap (){
+	toggleSidebar (a,b);
+}
+
+function toggleSidebar(text,css) {
 	if(sidebarOpen) {
 		var el = document.getElementById('mySidebar');
 		el.parentNode.removeChild(el);
@@ -21,20 +27,8 @@ function toggleSidebar() {
 	else {
 		var sidebar = document.createElement('div');
 		sidebar.id = "mySidebar";
-		sidebar.innerHTML = "\
-			<h1>Hello</h1>\
-			World!\
-		";
-		sidebar.style.cssText = "\
-			position:fixed;\
-			top:0px;\
-			left:70%;\
-			width:30%;\
-			height:100%;\
-			background:white;\
-			box-shadow:inset 0 0 1em black;\
-			z-index:999999;\
-		";
+		sidebar.innerHTML = text;
+		sidebar.style.cssText = css;
 		document.body.appendChild(sidebar);
 		sidebarOpen = true;
 	}
