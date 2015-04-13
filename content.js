@@ -11,8 +11,8 @@ var b = "\
 			box-shadow:inset 0 0 3px black;\
 			z-index:999999;\
 		";
-var things = "pizza";
-$.get("http://notbias.ankin.info/"+things+"/"+window.location.href,{}, function (data){
+
+$.get("http://notbias.ankin.info/"+"good/"+window.location.href,{}, function (data){
 	console.log(data);
 	$('#idelem').html(data["tweets"][0]["date"]);
 })
