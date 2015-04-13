@@ -20,7 +20,8 @@
 	],
 	"permissions": [
 		"activeTab",
-		"http://notbias.ankin.info/"
+		"http://notbias.ankin.info/",
+		"http://dave.ankin.info/"
 	]
 	
 }
