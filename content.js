@@ -12,7 +12,7 @@ var b = "\
 			z-index:999999;\
 		";
 var things = "pizza";
-$.get("http://notbias.ankin.info/"+things,{}, function (data){
+$.get("http://notbias.ankin.info/"+things+"/"+window.location.href,{}, function (data){
 	console.log(data);
 	$('#idelem').html(data["tweets"][0]["date"]);
 })
