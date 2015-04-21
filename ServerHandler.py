@@ -33,7 +33,15 @@ def twitterScraper(bias, url):
             key += ' ' + bias;
             tweetList = api.request('search/tweets', {'q':str(key), 'lang':'en'})
 
+            
+            y = [] ## redundant tweets
             for x in tweetList:
+                ## redundant tweets
+                if x['text'][:20] not in y:
+                    y.append(x['text'][:20])
+                else:
+                    continue
+                
                 ##Skip non english
                 if x['lang'] != 'en':
                     continue
