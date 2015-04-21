@@ -28,6 +28,13 @@ function toggleSidebar(text,css) {
 		var sidebar = document.createElement('div');
 		sidebar.id = "mySidebar";
 		sidebar.innerHTML = text;
+
+		$.get("http://notbias.ankin.info/"+"corrupt/"+window.location.href,{}, function (data){
+			console.log("recieved notbias b-end");
+			console.log(data);
+			$('#sectionmysection')[0].innerHTML=data;
+		});
+
 		sidebar.style.cssText = css;
 		document.body.appendChild(sidebar);
 		sidebarOpen = true;

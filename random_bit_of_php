@@ -1,0 +1,13 @@
+<?php
+public function tweet($text, $name, $user, )
+{
+	echo '<blockquote class="twitter-tweet" lang="en" align = "center">';
+	echo '<p>';
+	echo $text;		
+	echo '</p>';
+	echo '&mdash; '.$name." (@".$user.")"
+	echo '<a href="https://twitter.com/'.$user.'/status/'.$id.">".$Apr.' 13, 2015'.'</a>';
+	echo '</blockquote>';
+	echo '<script async src="http://platform.twitter.com/widgets.js" charset="utf-8"></script>';
+}
+?>

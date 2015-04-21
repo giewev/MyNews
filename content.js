@@ -14,11 +14,9 @@ var b = "\
 		";
 var c = "stuff";
 
-$.get("http://notbias.ankin.info/"+"good/"+window.location.href,{}, function (data){
-	console.log("recieved notbias b-end");
-	$.post("http://dave.ankin.info:9090/stuff.php", data, function (data) {
-		$('#sectionmysection').html(data);
-		console.log('recieved php template b-end');
-		console.log(data);
-	});
-})
+// $.get("http://notbias.ankin.info/"+"corrupt/"+window.location.href,{}, function (data){
+// 	console.log("recieved notbias b-end");
+// 	console.log(data);
+// 	$('#sectionmysection')[0].innerHTML=data;
+
+// })
