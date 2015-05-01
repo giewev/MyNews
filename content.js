@@ -11,8 +11,8 @@ var b = "\
 			background:white;\
 			box-shadow:inset 0 0 3px black;\
 			z-index:999999;\
-			overflox-y:scroll;
-			overflox-x:hidden;
+			overflox-y:scroll;\
+			overflox-x:hidden;\
 		";
 var c = "stuff";
 
